@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  header 
+   h1= 'Message Board'
+   p= 'Leave a comment'
+  
+  main
+    each message in messages
+      h2= message.title 
+      p.text= message.text 
+      footer 
+        p.user= message.user 
+        p.date= message.added
+        
+
+
+
+
+
+
+
+
+    
+
+  
+    
+
+    
+
+
+      

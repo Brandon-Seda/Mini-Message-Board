@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+    heading
+    h1= "New Message"
+    
+    main
+    <form method="POST" action="/new">
+    p.author= Author
+    input(type="text", name="author:", placeholder="Author Name")
+    p.post= Post
+    input(type="text", name="post", placeholder="Type post here!")
+    input#btn(type="submit")
+    </form>
+
