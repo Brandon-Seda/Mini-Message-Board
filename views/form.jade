@@ -1,15 +1,15 @@
-extends layout 
+extends layout
 
 block content 
     heading
-    h1= "New Message"
+    h1= "Submit a new message!"
     
     main
     <form method="POST" action="/new">
-    p.author= Author
-    input(type="text", name="author:", placeholder="Author Name")
-    p.post= Post
-    input(type="text", name="post", placeholder="Type post here!")
+    div(class="info")
+        input(type="text", name="title", placeholder="Title", id="title")
+        input(type="text", name="post", placeholder="Type post here!", id="post")
+        input(type="text", name="userName", placeholder="Name", id="username")
     input#btn(type="submit")
     </form>
 

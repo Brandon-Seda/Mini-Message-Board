@@ -3,15 +3,31 @@ extends layout
 block content
   header 
    h1= 'Message Board'
-   p= 'Leave a comment'
+   
   
   main
     each message in messages
-      h2= message.title 
-      p.text= message.text 
-      footer 
-        p.user= message.user 
-        p.date= message.added
+      h2= message.heading
+      div.messageContainer
+        h3.title= message.title
+        p.text= message.text 
+        footer 
+          p.user= message.user
+          p.date= message.added
+  
+block footer 
+  footer
+    a(href="https://github.com/Brandon-Seda")
+      img.github(src='images/github.png')
+    a(href="https://www.linkedin.com/in/brandon-seda/")
+      img.linkedin(src='images/linkedin.png')
+    
+    div
+      p 
+        &copy; Brandon Seda 2023
+
+    
+    
         
 
 
