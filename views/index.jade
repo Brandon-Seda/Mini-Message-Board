@@ -4,14 +4,13 @@ block content
   header 
    h1= 'Message Board'
    
-  
   main
     each message in messages
       h2= message.heading
       div.messageContainer
         h3.title= message.title
         p.text= message.text 
-        footer 
+        footer.messageFooter 
           p.user= message.user
           p.date= message.added
   
